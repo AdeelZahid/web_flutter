@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class ResponsiveWidget extends StatelessWidget {
   final Widget desktopScreen;
   final Widget? tabletScreen;
-  final Widget? mobileScreen;
+  final Widget mobileScreen;
 
   const ResponsiveWidget(
       {Key? key,
       required this.desktopScreen,
       this.tabletScreen,
-      this.mobileScreen})
+      required this.mobileScreen})
       : super(key: key);
 
   static bool isMobileScreen(BuildContext context) {
@@ -35,7 +35,7 @@ class ResponsiveWidget extends StatelessWidget {
             constraints.maxWidth >= 852) {
           return tabletScreen ?? desktopScreen;
         } else {
-          return mobileScreen ?? desktopScreen;
+          return mobileScreen;
         }
       },
     );
