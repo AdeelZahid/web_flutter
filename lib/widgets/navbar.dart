@@ -98,7 +98,7 @@ class _NavBarState extends State<NavBar> {
                           style: GoogleFonts.roboto(
                               fontSize: 16.0,
                               fontWeight: FontWeight.bold,
-                              color: _isHovering[0] ? active : disable),
+                              color: _isHovering[1] ? active : disable),
                         ),
                         SizedBox(
                           height: 15.0,
@@ -107,7 +107,7 @@ class _NavBarState extends State<NavBar> {
                           maintainAnimation: true,
                           maintainState: true,
                           maintainSize: true,
-                          visible: _isHovering[0],
+                          visible: _isHovering[1],
                           child: Container(
                             decoration: BoxDecoration(
                                 color: active,

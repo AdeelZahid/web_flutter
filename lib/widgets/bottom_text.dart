@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:web_ui/helpers/style.dart';
 
 class BottomText extends StatelessWidget {
   final String? mainText;
@@ -15,13 +16,14 @@ class BottomText extends StatelessWidget {
           TextSpan(text: "$mainText \n"),
           TextSpan(
             text: secondaryText,
-            style:
-                GoogleFonts.roboto(fontSize: 16.0, fontWeight: FontWeight.w300),
+            style: GoogleFonts.roboto(
+                color: active, fontSize: 16.0, fontWeight: FontWeight.w300),
           ),
         ],
         style: GoogleFonts.roboto(
           fontSize: 58.0,
           fontWeight: FontWeight.bold,
+          color: active,
         ),
       ),
     );

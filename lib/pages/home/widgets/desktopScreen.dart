@@ -95,6 +95,41 @@ class DesktopScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: screenSize.height / 14.0),
+                  Visibility(
+                    visible: screenSize.width > 700,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        BottomText(
+                          mainText: "15k+",
+                          secondaryText: "Dates and matches\nmade everyday",
+                        ),
+                        BottomText(
+                          mainText: "1,456",
+                          secondaryText: "New members\nsignup every day",
+                        ),
+                        BottomText(
+                          mainText: "1M+",
+                          secondaryText: "Members from\naround the world",
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: screenSize.width / 2,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(height: screenSize.width / 28),
+                  Image.asset(
+                    'assets/images/img.png',
+                    width: screenSize.width / 1.9,
+                  ),
                 ],
               ),
             ),
